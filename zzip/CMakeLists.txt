@@ -95,7 +95,7 @@ check_type_size( off64_t ZZIP_SIZEOF_OFF64_T )
 if(ZZIP_SIZEOF_OFF_T_32)
   message(STATUS "found sizeof(off_t/32)=${ZZIP_SIZEOF_OFF_T_32} and sizeof(off_t/64)=${ZZIP_SIZEOF_OFF_T_64}")
   if(NOT ZZIP_SIZEOF_OFF_T_32 EQUAL ZZIP_SIZEOF_OFF_T_64)
-    set(ZZIP_LARGEFILE_SENSITIVE 1)
+    set(ZZIP_LARGEFILE_SENSITIVE 0)
     # this will turn into ZZIP_LARGEFILE_RENAME so that zzip_opendir becomes zzip_opendir64 in the lib
     # which is needed on Linux/Solaris where the default zzip_opendir is expected to use a 32bit off_t
     message(STATUS "system is large file sensitive - do rename symbols to xx64")
