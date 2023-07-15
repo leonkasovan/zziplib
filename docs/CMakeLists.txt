@@ -5,14 +5,14 @@ include ( GNUInstallDirs )
 include ( FindPkgConfig )
 
 # options ########################################################
-option(BUILD_SHARED_LIBS "Build a shared library" ON)
+option(BUILD_SHARED_LIBS "Build a shared library" OFF)
 option(BUILD_TESTS "Build test programs" OFF)
 option(MSVC_STATIC_RUNTIME "Build with static runtime libs (/MT)" ON)
 option(ZZIP_HTMLSITE "Generate site html pages from docs" OFF)
 option(ZZIP_HTMPAGES "Generate html manpages from sources" OFF)
 
 if(UNIX OR MINGW)
-option(ZZIP_MANPAGES "Generate man3 manpages from sources" ON)
+option(ZZIP_MANPAGES "Generate man3 manpages from sources" OFF)
 else()
 option(ZZIP_MANPAGES "Generate man3 manpages from sources" OFF)
 endif()
