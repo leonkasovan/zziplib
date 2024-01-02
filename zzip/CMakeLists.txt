@@ -106,7 +106,7 @@ endif()
 configure_file ( ${CMAKE_CURRENT_SOURCE_DIR}/_config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/_config.h )
 
 # Zlib library needed
-find_package ( ZLIB REQUIRED )
+# find_package ( ZLIB REQUIRED )
 
 # if(UNIX)
 # CHECK_COMPILER_FLAG(C "-Warray-bounds" HAS_WARRAY_BOUNDS)
@@ -185,7 +185,7 @@ set(libzzipmmapped_HDRS mmapped.h memdisk.h)
 
 
 add_library(libzzip ${libzzip_SRCS} )
-target_link_libraries(libzzip ZLIB::ZLIB )
+# target_link_libraries(libzzip ZLIB::ZLIB )
 target_include_directories (libzzip PRIVATE ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} PUBLIC $<INSTALL_INTERFACE:include/zzip>)
 
 if(ZZIPFSEEKO)
