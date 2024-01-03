@@ -185,7 +185,7 @@ set(libzzipmmapped_HDRS mmapped.h memdisk.h)
 
 
 add_library(libzzip ${libzzip_SRCS} )
-# target_link_libraries(libzzip ZLIB::ZLIB )
+target_link_libraries(libzzip )
 target_include_directories (libzzip PRIVATE ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} PUBLIC $<INSTALL_INTERFACE:include/zzip>)
 
 if(ZZIPFSEEKO)
