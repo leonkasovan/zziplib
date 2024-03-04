@@ -359,7 +359,7 @@ if(ZZIP_LIBTOOL)
         ${outdir}/${lib}${libname}${librelease}${dll}.12
         DESTINATION ${CMAKE_INSTALL_LIBDIR})
     endif(ZZIPMMAPPED)
-  endif(CMAKE_SHARED_LIBRARY_SONAME_C_FLAG)
+  endif()
 endif(ZZIP_LIBTOOL)
 
 if(ZZIP_LIBLATEST)
